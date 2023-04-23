@@ -1,5 +1,17 @@
 # Assignment 5
 
+## Live site
+
+[Netlify Deployment](https://assignment-5-ci-cd-kap.netlify.app)
+
+## Local development
+
+### Source
+
+#### Clone
+
+`git clone https://github.com/cscie114/assignment-5---ci-cd-kapolos.git`
+
 ### Gatsby
 
 ### Description
