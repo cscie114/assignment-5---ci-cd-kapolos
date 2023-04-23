@@ -32,13 +32,15 @@ const Park: FC<PageProps<IPark>> = (props) => {
       </header>
 
       <main className={`container ${styles.images}`}>
-        {park.parkImages.map(image => (
-          <GatsbyImage
-            key={image.src}
-            image={image.childImageSharp.gatsbyImageData}
-            alt="Park Image"
-            className={styles.image}
-          />))}
+        {park.parkImages.map(image => {
+          return (
+            <GatsbyImage
+              key={image.src}
+              image={image.childImageSharp?.gatsbyImageData}
+              alt="Park Image"
+              className={styles.image}
+            />)
+        })}
       </main>
 
       <aside className={`container ${styles.links}`}>

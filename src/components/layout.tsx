@@ -8,7 +8,7 @@ interface ISiteLayoutProps {
 }
 
 const SiteLayout: FC<ISiteLayoutProps> = ({ children, title, pageId }) => {
-  const headerTitle = title ?? 'Assignment 4 - Gatsby | Ioannis'
+  const headerTitle = title ?? 'Assignment 5 - Gatsby | Ioannis'
 
   return (
     <div id="app">
