@@ -46,9 +46,13 @@ It can take a while to build!!
 
 The sharp-images plugin will process over 5500 images.
 
+GitHub action takes ~35 minutes to complete.
+
 ## Production deployment
 
 ### GitHub Secrets
+
+#### Build
 
 When pushing `main` on GitHub, the CI workflow automatically triggers.
 
@@ -58,3 +62,7 @@ You have to add a Secret in your Github repository, to setup the `.env` file. Se
 * For the `Secret` field, type: `NPS_API_KEY=<YOUR NPS KEY HERE>`
 
 The CI workflow will use the secret to create the `.env` file in the root directory.
+
+#### Netlify
+
+The action deploys to Netlify. To use, add your Netlify personal token as `NETLIFY_AUTH_TOKEN` secret and the site id as `NETLIFY_SITE_ID`.
