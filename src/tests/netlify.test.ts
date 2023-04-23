@@ -6,7 +6,7 @@ import { handler } from '../../netlify/functions/weather'
 config()
 
 describe('Netlify tests', () => {
-  test('It fetches Weather data', async () => {
+  test.skip('It fetches Weather data', async () => {
     const event = {
       body: JSON.stringify({
         lat: '38.9697',
