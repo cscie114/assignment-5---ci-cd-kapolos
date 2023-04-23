@@ -1,0 +1,75 @@
+@import url(https://fonts.cdnfonts.com/css/roboto);
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    background: rgb(34, 193, 195);
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+}
+
+a {
+    line-height: 32px;
+    font-size: 18px;
+    color: #00569c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited {
+    color: #00569c;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#app > header {
+    padding-bottom: 20px;
+    border-bottom: 1px dashed gray;
+}
+
+#app > main {
+    flex: 1;
+}
+
+#app > footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#app .navigation {
+    display: flex;
+}
+
+#app .navigation.__homepage {
+    display: none;
+}
+
+#app .navigation h4 {
+    font-weight: 800;
+}
+
+#app .navigation .spacer {
+    flex: 1;
+}
