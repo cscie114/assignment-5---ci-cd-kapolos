@@ -16,6 +16,9 @@ jobs:
         with:
           node-version: "18.x"
           cache: 'npm'
+      - name: 'Create env file from secret'
+        run: |
+          echo "${{ secrets.ENV_FILE }}" > .env
       - run: npm ci
       - run: npm run lint
       - run: npm test

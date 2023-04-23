@@ -45,3 +45,16 @@ It can take a while to build!!
 * `.cache`: 7.1 GB
 
 The sharp-images plugin will process over 5500 images.
+
+## Production deployment
+
+### GitHub Secrets
+
+When pushing `main` on GitHub, the CI workflow automatically triggers.
+
+You have to add a Secret in your Github repository, to setup the `.env` file. See [here](https://github.com/cscie114/assignment-5---ci-cd-kapolos.git) for instructions.
+
+* For the `Name` field, type `ENV_FILE`.
+* For the `Secret` field, type: `NPS_API_KEY=<YOUR NPS KEY HERE>`
+
+The CI workflow will use the secret to create the `.env` file in the root directory.
