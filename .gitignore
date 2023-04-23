@@ -5,3 +5,6 @@ src/gatsby-types.d.ts
 .idea/
 .fetch-cache/
 .env
+
+# Local Netlify folder
+.netlify

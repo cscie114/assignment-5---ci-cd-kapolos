@@ -1,5 +1,24 @@
 # Assignment 5
 
+## Serverless functionality
+
+For every park, we can check the current weather.
+
+### API Token
+
+Create a free API token [here](https://www.visualcrossing.com/sign-up). The free tier allows for 1000 calls per day.
+
+The process is:
+* Enter your email
+* Enter the verification token you will receive
+* Set a password for your new account
+* Agree to the terms.
+* Write "test the API" (or whatever you like) on the description box
+* Press "Create Account"
+* Sign in
+* Click on Account (top right)
+* Get the API key from "Your details" section
+
 ## Live site
 
 [Netlify Deployment](https://assignment-5-ci-cd-kap.netlify.app)
@@ -27,8 +46,15 @@ In order to reduce build time, there are the following differences:
 
 #### Setup API key
 
+##### NPS
+
 Create a `.env` file with a key called `NPS_API_KEY`.
-Set your NPS API key as its value.
+Set your NPS API token as its value.
+
+##### OpenWeather
+
+Add a new line to the `.env` file with key `WEATHER_API_KEY`.
+Set up your Open Weather API token as its value.
 
 #### Install dependencies
 
@@ -63,6 +89,13 @@ You have to add a Secret in your Github repository, to setup the `.env` file. Se
 
 The CI workflow will use the secret to create the `.env` file in the root directory.
 
-#### Netlify
-
 The action deploys to Netlify. To use, add your Netlify personal token as `NETLIFY_AUTH_TOKEN` secret and the site id as `NETLIFY_SITE_ID`.
+
+### Netlify setup
+
+Create a new environment variable for your site in Netlify to power the Weather API fetching.
+
+Set `WEATHER_API_KEY` as the key and the API token as its value.
+Scopes can be left to the default `All scopes`.
+
+
