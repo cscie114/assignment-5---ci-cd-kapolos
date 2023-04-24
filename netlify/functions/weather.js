@@ -4,6 +4,7 @@ const handler = async function (event) {
   const baseUrl =
     'https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/'
   const { lat, long } = JSON.parse(event.body)
+  console.log(`Received: ${lat}, ${long}`)
 
   if (lat == null || long == null) {
     return {
