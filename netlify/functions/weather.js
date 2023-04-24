@@ -1,4 +1,4 @@
-const fetch = require('node-fetch')
+const axios = require('axios')
 
 const handler = async function (event) {
   const baseUrl =
@@ -16,27 +16,17 @@ const handler = async function (event) {
   const apiUrl = `${baseUrl}${lat},${long}?key=${process.env.WEATHER_API_KEY}`
 
   try {
-    const response = await fetch(apiUrl, {
-      method: 'GET',
-      headers: {
-        Accept: 'application/json'
-      }
-    })
+    const response = await axios.get(apiUrl)
 
-    if (!response.ok) {
-      return { statusCode: response.status, body: response.statusText }
-    }
-
-    const data = await response.json()
     return {
       statusCode: 200,
-      body: JSON.stringify({ data })
+      body: JSON.stringify({ data: response.data })
     }
   } catch (error) {
     console.log(error)
     return {
       statusCode: 500,
-      body: JSON.stringify({ msg: error.message })
+      body: JSON.stringify({ msg: error })
     }
   }
 }
