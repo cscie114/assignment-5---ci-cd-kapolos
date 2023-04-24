@@ -3,6 +3,8 @@ import { graphql, PageProps } from 'gatsby'
 import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
 import Layout from '../../components/layout'
+import Weather from '../../components/weather'
+
 import * as styles from './park.module.css'
 
 interface IParkImage {
@@ -56,6 +58,10 @@ const Park: FC<PageProps<IPark>> = (props) => {
                  alt="Google Maps for Park Location"/>
           </a>
         </div>
+      </aside>
+
+      <aside className={`container ${styles.weather}`}>
+        <Weather lat={park.latitude} long={park.longitude}/>
       </aside>
     </Layout>
   )

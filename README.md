@@ -1,10 +1,18 @@
 # Assignment 5
 
+## Live site
+
+[Netlify Site](https://assignment-5-ci-cd-kap.netlify.app)
+
 ## Serverless functionality
 
-For every park, we can check the current weather.
+For every park, we can check the current weather and future prediction.
 
-### API Token
+![button](https://i.imgur.com/8sh6jpQ.png)
+![result](https://i.imgur.com/zNSV71h.png)
+
+
+### Weather API Token
 
 Create a free API token [here](https://www.visualcrossing.com/sign-up). The free tier allows for 1000 calls per day.
 
@@ -19,10 +27,6 @@ The process is:
 * Click on Account (top right)
 * Get the API key from "Your details" section
 
-## Live site
-
-[Netlify Deployment](https://assignment-5-ci-cd-kap.netlify.app)
-
 ## Local development
 
 ### Source
@@ -35,11 +39,11 @@ The process is:
 
 ### Description
 
-This is a modified version of Assignment 4.
+This is a <u>modified version</u> of Assignment 4.
 
 In order to reduce build time, there are the following differences:
 
-* Places are not used
+* Places are not used.
 * Park images are displayed instead.
 
 ### Local Installation
@@ -74,6 +78,12 @@ The sharp-images plugin will process over 5500 images.
 
 GitHub action takes ~35 minutes to complete.
 
+#### With netlify dev environment
+
+`netlify-cli` has been installed as part of the dev dependencies. You can use `npm run netlify-dev` to launch an environment that supports local serverless functionality.
+
+If you are using `WSL 2`, you will probably want to `export BROWSER=none` before launching the script.
+
 ## Production deployment
 
 ### GitHub Secrets
@@ -98,4 +108,6 @@ Create a new environment variable for your site in Netlify to power the Weather 
 Set `WEATHER_API_KEY` as the key and the API token as its value.
 Scopes can be left to the default `All scopes`.
 
+#### Upgrade deployment to live
 
+After the GitHub action completes we have a deployment in Netlify, but it is not active. You will need to promote it via the Netlify site. Click on the deployment as listed in the "Production deploys" sections and then click "Publish Deploy".

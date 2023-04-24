@@ -1,0 +1,42 @@
+.buttonWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonWrapper button {
+    background-color: #08a8e8;
+    color: white;
+    font-size: 24px;
+    padding: 10px 12px;
+    border-color: white;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.buttonWrapper button:hover {
+    cursor: pointer;
+}
+
+
+.dataWrapper {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dataWrapper table {
+    margin-top: 10px;
+    width: 500px;
+
+}
+
+.dataWrapper tr > td:last-of-type {
+    text-align: center;
+}
+
+.dataWrapper th:first-of-type {
+    text-align: center;
+}
