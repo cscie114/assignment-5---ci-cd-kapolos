@@ -50,6 +50,7 @@ jobs:
         run: |
           echo "${{ secrets.ENV_FILE }}" > .env
 
+      - run: npm ci
       - run: npm run build
 
       - name: Deploy to Netlify
